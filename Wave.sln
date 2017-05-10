@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{D911B348-23C7-674C-2925-56DC56148C27}") = "Wave", "Assembly-CSharp.csproj", "{70442242-4CF5-7411-13F5-80B8FE5EF17C}"
+EndProject
+Project("{D911B348-23C7-674C-2925-56DC56148C27}") = "Wave", "Assembly-CSharp-Editor.csproj", "{E73DDFFB-F621-C3DE-D963-C844E3A2BEC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70442242-4CF5-7411-13F5-80B8FE5EF17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70442242-4CF5-7411-13F5-80B8FE5EF17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70442242-4CF5-7411-13F5-80B8FE5EF17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70442242-4CF5-7411-13F5-80B8FE5EF17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73DDFFB-F621-C3DE-D963-C844E3A2BEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73DDFFB-F621-C3DE-D963-C844E3A2BEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73DDFFB-F621-C3DE-D963-C844E3A2BEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73DDFFB-F621-C3DE-D963-C844E3A2BEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
