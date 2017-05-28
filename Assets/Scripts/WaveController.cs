@@ -22,8 +22,16 @@ public class WaveController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		int j = 0;
+		mySurface.InitGrid(randomGrid());
+		mySurface.Calculate();
+		resultGrid = mySurface.outputGrid;
+		controlGrid = mySurface.controlGrid;
+		generateMesh();
+		updateMesh();
+
+		/*
 		//CONTROL DRAWS
+		int j = 0;
 		for(int i=0; i<mySurface.NI; i++)
 		{
 			for(j=0; j<mySurface.NJ; j++)
@@ -36,7 +44,22 @@ public class WaveController : MonoBehaviour {
 		for(int i=0; i<mySurface.NJ; i++)
 		{
 			Debug.DrawLine(controlGrid[mySurface.NI, i], controlGrid[mySurface.NI, i+1], Color.red);   
+		}*/
+	}
+
+	private Vector3[,] randomGrid() {
+		float height = mySurface.NI;
+		float width = mySurface.NJ;
+		Vector3[,] controlGrid = new Vector3[(int)height+1,(int)width+1];
+		float seed = UnityEngine.Random.insideUnitCircle.x;
+		for(float i = 0.0f; i < height + 1; i++) {
+			for(float j = 0.0f; j < width + 1; j++) {
+				controlGrid[(int)i, (int)j].x = i;
+				controlGrid[(int)i, (int)j].y = j;
+				controlGrid[(int)i,(int)j].z = Mathf.PerlinNoise (seed + i / width, seed + j / height);
+			}
 		}
+		return controlGrid;
 	}
 
 	//generate a Mesh

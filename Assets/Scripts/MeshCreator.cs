@@ -15,7 +15,7 @@ public class MeshCreator : MonoBehaviour {
 		MeshFilter meshFilter = (MeshFilter)plane.AddComponent(typeof(MeshFilter));
 		meshFilter.mesh = CreateMesh(1, 0.2f);
 		MeshRenderer renderer = plane.AddComponent(typeof(MeshRenderer)) as MeshRenderer;
-		renderer.material.shader = Shader.Find ("Particles/Additive");
+		//renderer.material.shader = Shader.Find ("Particles/Additive");
 		Texture2D tex = new Texture2D(1, 1);
 		tex.SetPixel(0, 0, Color.green);
 		tex.Apply();
