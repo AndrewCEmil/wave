@@ -12,6 +12,6 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void LateUpdate () {
-		transform.position = transform.position + updateVec;
+		//transform.position = transform.position + updateVec;
 	}
 }
