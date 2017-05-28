@@ -18,16 +18,20 @@ public class WaveController : MonoBehaviour {
 		controlGrid = mySurface.controlGrid;
 		generateMesh();
 		updateMesh();
+		Profiler.maxNumberOfSamplesPerFrame = -1;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		Profiler.BeginSample ("UPDATING");
 		mySurface.InitGrid(randomGrid());
 		mySurface.Calculate();
 		resultGrid = mySurface.outputGrid;
 		controlGrid = mySurface.controlGrid;
 		generateMesh();
 		updateMesh();
+		Profiler.EndSample ();
+
 
 		/*
 		//CONTROL DRAWS
