@@ -21,6 +21,8 @@ public class MeshCreator : MonoBehaviour {
 		tex.Apply();
 		renderer.material.mainTexture = tex;
 		renderer.material.color = Color.green;
+		MeshCollider meshCollider = (MeshCollider)plane.AddComponent (typeof(MeshCollider));
+
 		plane.AddComponent<WaveController> ();
 	}
 
@@ -41,6 +43,7 @@ public class MeshCreator : MonoBehaviour {
 			new Vector2 (1, 0)
 		};
 		m.triangles = new int[] { 0, 1, 2, 0, 2, 3};
+		m.triangles = new int[] { 0, 1, 2};
 		m.RecalculateNormals();
 
 		return m;
