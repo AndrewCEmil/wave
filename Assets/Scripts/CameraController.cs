@@ -3,16 +3,15 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-	public GameObject player;
-	private Vector3 offset;
 	// Use this for initialization
+	private float speed;
+	private Vector3 updateVec;
 	void Start () {
-		offset = new Vector3 (0, 0, 0);
+		speed = 0.1f;
+		updateVec = new Vector3 (0, speed, 0);
 	}
 
 	void LateUpdate () {
-		if (player != null) { //Not used for scenes where you dont move
-			transform.position = player.transform.position + offset;
-		}
+		transform.position = transform.position + updateVec;
 	}
 }
